@@ -1,6 +1,6 @@
 context:
   name: certbot-dns-rfc2136
-  version: "5.4.0"
+  version: "5.5.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 27a029ae558a5d241df1a441a4f711b36d76df2f5c4f049ed3d1b57d7d10b59a
+  sha256: ef26302b9fb0496bbb60ec820b7d1f87e887507842c7ee3632af9af4ad6d22df
 
 build:
   noarch: python
