@@ -1,13 +1,12 @@
 context:
-  name: certbot-dns-rfc2136
   version: "5.8.0"
 
 package:
-  name: ${{ name|lower }}
+  name: certbot-dns-rfc2136
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/certbot-dns-rfc2136/certbot_dns_rfc2136-${{ version }}.tar.gz
   sha256: 6a2f105b29bc5d79f653d2ea9c4a94d24e2916dbc6294e4f0d8ee7cb8d44041b
 
 build:
@@ -31,7 +30,9 @@ tests:
       imports:
         - certbot_dns_rfc2136
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://certbot.eff.org
